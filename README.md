@@ -11,16 +11,13 @@ Offline-first CV builder. Your data is plain JSON in a working folder you choose
 4. Windows installer: `npm run dist` (output in `dist/`, unsigned). After updating the source with `update.bat`, run `npm run dist` again to refresh the installed app.
 5. Publishing a release: after `npm run dist`, run `npm run checksum`. It prints the installer's SHA-256 and a ready-to-paste block for the GitHub release notes.
 
-## Verifying a download
-Each release lists a SHA-256 checksum. In PowerShell: `Get-FileHash "Dossier Setup x.y.z.exe" -Algorithm SHA256` and compare it with the release notes.
-
 ## Layout
-Top bar: Home (Overview, CVs, Applications) | Repository | Editor | Review | Import | **+** (new entry / CV / application) | gear (Settings) | profile.
+Top bar: Home (Overview, CVs, Applications) | Repository | Editor | Review | Import | **+** (new entry / CV / application) | Settings | profile.
 Import has the importer on the left and a LinkedIn window on the right (separate sign-in per account, shared across profiles only when you pick an account from another profile).
 
 ## Privacy
 - Everything is stored in your working folder; nothing is sent anywhere by default.
-- Internet is used only when you ask: AI help (Gemini, Groq; Ollama stays on this PC), fetching a job page, site icons for links, the LinkedIn window. Names, email, phone and links can be removed before text is sent.
+- Internet is used only when you ask: AI help (Gemini, Groq, Ollama), fetching a job page, site icons for links, the LinkedIn window. Names, email, phone and links can be removed before text is sent to any AI.
 - API keys are encrypted with your Windows login and kept outside the working folder, so backups and exports never contain them.
 - Custom templates cannot run scripts or load anything from the internet.
 
@@ -37,7 +34,7 @@ Import has the importer on the left and a LinkedIn window on the right (separate
 ## Known limits
 - No OCR for scanned PDFs, no .doc (save as .docx or PDF).
 - Import grouping is best-effort; check the review screen.
-- Word export is single column for multi-column templates; PDF is the intended look.
+- Word export is single column for multi-column templates; PDF is the intended look, retains multi-column formats.
 - Multi-column templates are marked ATS "tolerant", single-column ones "safe".
 
 ## Development
