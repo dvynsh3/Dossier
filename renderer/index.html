@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src 'self' about: blob: data: https://*.linkedin.com; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none';">
+<title>Dossier</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <button id="brand" title="Home: all your CVs"></button>
+    <nav id="tabs" aria-label="Main sections"></nav>
+    <div class="spacer"></div>
+    <button class="icon-btn" id="btnPlus" data-tip="Create something new" title=""></button>
+    <div id="topActions"></div>
+    <button class="icon-btn" id="btnCollapse" data-tip="Hide or show the editor actions"></button>
+    <button class="icon-btn" id="btnGear" data-tip="Settings"></button>
+    <button class="avatar-btn" id="btnProfile" data-tip="Profiles"></button>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="splash"><div class="splashin"></div></div>
+<div id="gate"></div>
+<div id="overlay"></div>
+<div id="toasts" aria-live="polite"></div>
+<div id="dropveil"><div>Drop CV files here to import them</div></div>
+<script src="../src/core/model.js"></script>
+<script src="../src/core/qr.js"></script>
+<script src="../src/core/templates-extra.js"></script>
+<script src="../src/core/templates.js"></script>
+<script src="../src/core/review.js"></script>
+<script src="pager.js"></script>
+<script src="logo-data.js"></script>
+<script src="logo.js"></script>
+<script src="splash.js"></script>
+<script src="icons.js"></script>
+<script src="ui.js"></script>
+<script src="personal.js"></script>
+<script src="ai-dialogs.js"></script>
+<script src="repo-tools.js"></script>
+<script src="repo.js"></script>
+<script src="repo-drawer.js"></script>
+<script src="picker.js"></script>
+<script src="editor.js"></script>
+<script src="editor-left.js"></script>
+<script src="editor-right.js"></script>
+<script src="editor-export.js"></script>
+<script src="editor-template.js"></script>
+<script src="browse-apps.js"></script>
+<script src="browse.js"></script>
+<script src="review-tab.js"></script>
+<script src="import-tab.js"></script>
+<script src="settings-tab.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

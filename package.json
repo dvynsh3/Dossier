@@ -1,0 +1,52 @@
+{
+  "name": "cv-builder",
+  "version": "1.10.10",
+  "description": "Dossier: offline CV builder with an item repository, versions, many ATS-safe templates and multi-format export",
+  "author": "dvynsh3",
+  "license": "MIT",
+  "homepage": "https://github.com/dvynsh3/Dossier-CV",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvynsh3/Dossier-CV.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "web": "node dev/server.js",
+    "test": "node --test --test-reporter=spec \"tests/unit/*.test.js\" \"tests/ui/*.test.js\"",
+    "test:unit": "node --test --test-reporter=spec \"tests/unit/*.test.js\"",
+    "test:ui": "node --test --test-reporter=spec \"tests/ui/*.test.js\"",
+    "lint": "node scripts/lint.js",
+    "dist": "electron-builder --win",
+    "checksum": "node scripts/checksum.js"
+  },
+  "dependencies": {
+    "docx": "^9.0.0",
+    "jszip": "^3.10.1",
+    "pdfjs-dist": "^6.2.108"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0",
+    "playwright": "^1.48.0",
+    "typescript": "^5.6.0"
+  },
+  "build": {
+    "appId": "local.cvbuilder",
+    "productName": "Dossier",
+    "files": [
+      "main.js",
+      "preload.js",
+      "li-preload.js",
+      "src/**/*",
+      "renderer/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "productName": "Dossier"
+}
